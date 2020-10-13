@@ -1,0 +1,343 @@
+/* Responsive CSS */
+@media (max-width: 575px) { 
+ 
+}
+@media (max-width: 767px) { 
+
+}
+@media (max-width: 991px) { 
+  
+}
+@media (max-width: 1199px) {
+  .kategori{
+    display: none;
+  } 
+  .kate{
+    display: none;
+  }
+  .menu1 > .navbar > .brand-kate:hover > div {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+  }
+
+  .btn{
+    font-size: 14px;
+  }
+}
+
+
+/* Selector */
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #F5F5F5;
+}
+i{
+  color: #3498db;
+}
+button{
+  cursor: pointer;
+}
+
+/* Navbar Header */
+.navbar-header{
+  min-height: 40px;
+  font-size: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-header .navbar-brand{
+  font-size: 12px;
+  color: #444;
+}
+
+.navbar-header .navbar-nav .nav-item .nav-link{
+  color: #444;
+}
+
+.navbar-header .navbar-nav .nav-item .nav-link:hover{
+  color: #3498db;
+  cursor: pointer;
+}
+
+/* Header */
+.menu .navbar-nav .nav-item .nav-link{
+  color: #FFF;
+}
+.menu .navbar-nav .nav-item .nav-link:hover{
+  color: rgba(44, 62, 80,1.0);
+  border-bottom: 2px solid rgba(44, 62, 80,1.0);
+}
+.menu .navbar-brand, .menu .navbar-toggler{
+  color: #FFF;
+}
+
+.menu{
+  background-color: rgba(52, 152, 219,0.9);
+}
+
+.menu1{
+  background-color: rgba(41, 128, 185,1.0);
+}
+
+.menu .navbar-nav .nav-item .active{
+  color: rgba(44, 62, 80,1.0);
+  border-bottom: 2px solid rgba(44, 62, 80,1.0);
+}
+
+
+/* banner */
+.carousel img{
+  height: 350px;
+}
+
+.kate{
+  border: 1px solid rgba(52, 152, 219,1.0);
+  border-top: 0px;
+}
+
+.kate .nav-link:hover{
+  color: #FFFFFF;
+}
+
+.kate .nav-item:hover{
+  background-color: rgba(41, 128, 185,1.0);
+}
+
+.menu1 > .navbar > .brand-kate > div {
+    position: absolute;
+    display: block;
+    top: 56px;
+    left: 0;
+    padding: 0 10px 0 10px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    width: 285px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(52, 152, 219,1.0);
+    border-top: none;
+    -webkit-transition: all .3s ease .15s;
+    -moz-transition: all .3s ease .15s;
+    -o-transition: all .3s ease .15s;
+    -ms-transition: all .3s ease .15s;
+    transition: all .3s ease .15s;
+
+    z-index: 999999;
+}
+.menu1 > .navbar > .brand-kate:hover > div {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+}
+
+.menu1 .nav{
+  min-width: 235px;
+}
+
+.menu1 .nav-link:hover{
+  color: #FFFFFF;
+}
+
+.menu1 .nav-item:hover{
+  background-color: rgba(41, 128, 185,1.0);
+}
+
+/* footer */
+.footer{
+  min-height: 300px;
+  background-color: #3498db;
+  color:#FFF;
+}
+
+.footer-bawah{
+  background-color: #2980b9;
+  color: #FFF;
+}
+
+/* Segitga */
+.triangle{
+  margin:10px;
+  float: left;
+  position: absolute;
+  top: -25px;
+  left: 12px;
+
+}
+      
+/* Kelompok 1 */
+.demo-arrow-up{
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  
+  border-bottom: 15px solid #FFF;
+
+}
+.demo-arrow-down{
+  width: 0; 
+  height: 0; 
+  
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  
+  border-top: 50px solid #FFF;
+}
+/* .nav-tabs{
+  border: 0;
+} */
+
+.nav-tabs .nav-item{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.nav-tabs .nav-item .active{
+  border:0;
+  border-bottom: 3px solid #3498db;
+}
+
+.nav-tabs .nav-item .nav-link:hover{
+  border:0;
+  border-bottom: 3px solid #3498db
+}
+
+/*
+ * Dashboard
+ */
+
+/* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.card .gambar{
+  overflow: hidden; 
+  min-height: 181.88px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%  50%;
+  background-size: cover;
+}
+
+.card .card-body .card-title{
+  min-height: 80px;
+}
+
+.fp-setting-blur {
+    width: 90%;
+    height: 100%;
+    background: rgba( 0, 0, 0, 0.269 );
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.fp-setting:hover {
+    cursor: pointer;
+}
+
+.fp-setting:hover .fp-setting-blur {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+.top-5{
+  z-index: 900;
+    top: 51px;
+}
+
+/* * ==========================================================================
+    Screen Loader
+* ==========================================================================
+   ==================================================
+   ================================================== */
+.screen-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+/* * ==========================================================================
+    Preloader
+* ==========================================================================
+   ==================================================
+   ================================================== */
+#preload {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  background: #000;
+  display: none;
+  z-index: 10000;
+}
+#preload-status {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  opacity: 1;
+  -moz-opacity: 1;
+  -webkit-opacity: 1;
+  filter: alpha(opacity=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+}
+/* preload content   */
+.preload-content {
+  position: fixed;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.6;
+  -moz-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  filter: alpha(opacity=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+}
+.preload-content-rain {
+  position: fixed;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+  -moz-opacity: 0.4;
+  -webkit-opacity: 0.4;
+  filter: alpha(opacity=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+}

@@ -1,0 +1,22 @@
+	RewriteEngine on
+	RewriteBase /bengkel%20ikan/dashboard
+	RewriteCond %{REQUEST_FILENAME} !-f 
+
+	RewriteRule ^([a-zA-Z0-9\-]+)/?$ index.php?page=$1
+	RewriteRule ^([a-zA-Z0-9\-]+)/msg=([a-zA-Z0-9\-]+)/?$ index.php?page=$1&msg=$2
+	RewriteRule ^pesanan/detail-pesanan/id=(.*)/msg=([a-zA-Z0-9\-]+)/?$ index.php?page=pesanan&action=detail-pesanan&id=$1&msg=$2
+	RewriteRule ^([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)/?$ index.php?page=$1&action=$2
+	RewriteRule ^([a-zA-Z0-9\-]+)/edit/id=(.*)$ index.php?page=$1&action=edit&id=$2
+	RewriteRule ^([a-zA-Z0-9\-]+)/detail-pesanan/id=(.*)$ index.php?page=$1&action=detail-pesanan&id=$2
+	RewriteRule ^([a-zA-Z0-9\-]+)/detail-user/id=(.*)$ index.php?page=$1&action=detail-user&id=$2
+
+	RewriteRule ^masuk/?/?$ index.php?page=masuk
+	RewriteRule ^daftar-seller/?/?$ index.php?page=daftar-seller
+	RewriteRule ^daftar-seller/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=daftar-seller&msg=$1
+	RewriteRule ^masuk/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=masuk&msg=$1
+
+	RewriteRule ^lupa-password/?/?$ index.php?page=lupa-password
+	RewriteRule ^lupa-password/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=lupa-password&msg=$1
+	RewriteRule ^lupa-password/reset-password/kd_user=([a-zA-Z0-9\-]+)/kode_reset_password=([a-zA-Z0-9\-]+)/?/?$ index.php?page=lupa-password&action=reset-password&kd_user=$1&kode_reset_password=$2
+
+	Options -Indexes

@@ -1,0 +1,4 @@
+1. simpan dengan nama folder "bengkel ikan"
+2. Untuk masuk ke halaman dashboard tambahkan "/dashboard" pada url
+3. Email Admin    : admin@bengkelikan.com
+   Passowrd Admin : 12345	 

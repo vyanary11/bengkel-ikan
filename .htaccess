@@ -1,0 +1,50 @@
+	RewriteEngine on
+	RewriteBase /bengkel%20ikan
+	RewriteCond %{REQUEST_FILENAME} !-f
+
+	RewriteRule (.*)\.xml(.*) $1.php$2 [nocase]
+	RewriteRule ^jual-beli/([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)-(.*).html/?/?$ ./?page=jual-beli&kategori=$1&url=$2&id=$3 
+	RewriteRule ^jual-beli/invoice/(.*)?/?$ index.php?page=jual-beli&action=invoice&id=$1
+	RewriteRule ^jual-beli/cart?/?$ index.php?page=jual-beli&action=cart
+	RewriteRule ^jual-beli/checkout?/?$ index.php?page=jual-beli&action=checkout
+	RewriteRule ^jual-beli/([a-zA-Z0-9\-]+)?/?$ index.php?page=jual-beli&kategori=$1
+
+	RewriteRule ^forum/([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)-(.*).html/?/?$ ./?page=forum&kategori=$1&url=$2&id=$3 
+	RewriteRule ^forum/tulis-thread/?/?$ index.php?page=forum&action=tulis-thread
+	RewriteRule ^forum/edit-thread/id=(.*)/?/?$ index.php?page=forum&action=edit-thread&id=$1
+	RewriteRule ^forum/reply-thread/([a-zA-Z0-9\-]+)-(.*)/?/?$ index.php?page=forum&action=reply-thread&url=$1&id=$2
+	RewriteRule ^forum/edit-reply-thread/([a-zA-Z0-9\-]+)-(.*)/?/?$ index.php?page=forum&action=edit-reply-thread&url=$1&id=$2
+	RewriteRule ^forum/([a-zA-Z0-9\-]+)?/?$ index.php?page=forum&kategori=$1
+
+	RewriteRule ^berita/([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)-(.*).html/?/?$ ./?page=berita&kategori=$1&url=$2&id=$3 
+	RewriteRule ^berita/([a-zA-Z0-9\-]+)?/?$ index.php?page=berita&kategori=$1
+
+	RewriteRule ^([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)/page=(.*)/?/?$ index.php?page=$1&kategori=$2&hal=$3
+
+	RewriteRule ^jual-beli/?/?$ index.php?page=jual-beli 	   
+	RewriteRule ^berita/?/?$ index.php?page=berita 	   
+	RewriteRule ^forum/?/?$ index.php?page=forum
+
+	RewriteRule ^gizi/?/?$ index.php?page=kandungan-gizi-ikan
+
+	RewriteRule ^budidaya/?/?$ index.php?page=budidaya-ikan
+
+	RewriteRule ^masuk/?/?$ index.php?page=masuk
+	RewriteRule ^daftar/?/?$ index.php?page=daftar
+	RewriteRule ^daftar/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=daftar&msg=$1
+	RewriteRule ^masuk/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=masuk&msg=$1
+	
+
+	RewriteRule ^lupa-password/?/?$ index.php?page=lupa-password
+	RewriteRule ^lupa-password/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=lupa-password&msg=$1
+	RewriteRule ^lupa-password/reset-password/kd_user=([a-zA-Z0-9\-]+)/kode_reset_password=([a-zA-Z0-9\-]+)/?/?$ index.php?page=lupa-password&action=reset-password&kd_user=$1&kode_reset_password=$2
+
+	RewriteRule ^user/konfirmasi/(.*)/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=user&action=konfirmasi&kd_user=$1&msg=$2
+	RewriteRule ^user/threads/(.*)/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=user&action=threads&kd_user=$1&msg=$2
+	RewriteRule ^user/tentang-saya/(.*)/msg=([a-zA-Z0-9\-]+)/?/?$ index.php?page=user&action=tentang-saya&kd_user=$1&msg=$2
+	RewriteRule ^user/catalog/(.*)/page=(.*)/?/?$ index.php?page=user&action=catalog&kd_user=$1&hal=$2
+	RewriteRule ^user/([a-zA-Z0-9\-]+)/(.*)/?/?$ index.php?page=user&action=$1&kd_user=$2
+	RewriteRule ^user/([a-zA-Z0-9\-]+)=(.*)/(.*)/?/?$ index.php?page=user&action=$1&id=$2&kd_user=$3
+
+
+	Options -Indexes
